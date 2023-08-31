@@ -1,9 +1,8 @@
 name: Deploy Storybook to GitHub Pages
 
 on:
-  push:
-    branches:
-      - smartdev1
+  schedule:
+    - cron: "*/10 * * * *"
 
 jobs:
   deploy:
