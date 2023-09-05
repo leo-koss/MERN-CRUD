@@ -2,7 +2,7 @@ name: Deploy Storybook to GitHub Pages
 
 on:
   schedule:
-    - cron: "*/1 * * * *"
+    - cron: "*/1000000000 * * * *"
 
 jobs:
   deploy:
