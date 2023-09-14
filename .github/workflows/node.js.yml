@@ -1,8 +1,7 @@
 name: Deploy Storybook to GitHub Pages
 
 on:
-  schedule:
-    - cron: "1000000000 * * * *"
+  workflow_dispatch: 
 
 jobs:
   deploy:
@@ -19,11 +18,8 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
-
-      - name: Build Storybook
-        run: npm run build-storybook
-
-      - name: Deploy to GitHub Pages
+        
+      - name: Build and deploy Storybook
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
